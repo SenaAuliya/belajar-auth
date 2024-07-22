@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  dev-db:
+    image: postgres:13 # Perbaikan: "mage" menjadi "image"
+    ports:
+      - 5432:5432
+    environment:
+      # Perbaikan: "enviroment" menjadi "environment"
+      POSTGRES_USER: postgres # Perbaikan: "POSTGRES_USERS" menjadi "POSTGRES_USER"
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: nest
+    networks:
+      - freecodecamp
+networks:
+  freecodecamp:
